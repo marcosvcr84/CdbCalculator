@@ -1,0 +1,15 @@
+<form (ngSubmit)="calculate()">
+    <label>
+        Valor Inicial:
+        <input [(ngModel)]="initialValue" name="initialValue">
+    </label>
+    <label>
+        Meses:
+        <input [(ngModel)]="months" name="months">
+    </label>
+    <button type="submit">Calcular</button>
+</form>
+<div *ngIf="grossValue && netValue">
+    <p>Valor Bruto: {{grossValue}}</p>
+    <p>Valor Líquido: {{netValue}}</p>
+</div>
